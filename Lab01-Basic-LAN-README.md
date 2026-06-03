@@ -20,6 +20,7 @@ PC0 ---- Switch0 ---- PC1
 | PC1 | Generic PC |
 | Switch0 | Cisco 2960 |
 
+
 <img width="398" height="312" alt="image" src="https://github.com/user-attachments/assets/ac84a24a-b590-48c3-a2ce-e54993907f07" />
 
 
@@ -34,6 +35,7 @@ PC0 ---- Switch0 ---- PC1
 | IP Address | 192.168.1.10 |
 | Subnet Mask | 255.255.255.0 |
 
+
 <img width="695" height="712" alt="image" src="https://github.com/user-attachments/assets/92803d8a-39fd-4075-be8c-88dd9a274ceb" />
 
 
@@ -43,6 +45,7 @@ PC0 ---- Switch0 ---- PC1
 |----------|----------|
 | IP Address | 192.168.1.20 |
 | Subnet Mask | 255.255.255.0 |
+
 
 <img width="690" height="651" alt="image" src="https://github.com/user-attachments/assets/da3c1374-961f-4ef3-8bd0-8370707e8db8" />
 
@@ -68,6 +71,7 @@ Packets: Sent = 4, Received = 4, Lost = 0
 Result:
 
 ✅ Successful communication between PC0 and PC1.
+
 
 <img width="688" height="687" alt="image" src="https://github.com/user-attachments/assets/6f36c968-c2b0-432e-846c-f0192b4e282b" />
 <img width="707" height="688" alt="image" src="https://github.com/user-attachments/assets/d12b2009-7cdb-412b-a891-9e97a0a76ad4" />
