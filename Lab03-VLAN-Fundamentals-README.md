@@ -3,7 +3,8 @@
 ## Objective
 Create multiple VLANs on a Cisco switch and verify communication within the same VLAN while preventing communication between different VLANs.
 
-<img width="787" height="527" alt="lab3-1" src="https://github.com/user-attachments/assets/bf2de4c0-cbda-4d68-8fec-93e39ba7c9b1" />
+<img width="760" height="431" alt="lab3-1" src="https://github.com/user-attachments/assets/7d32fbac-712c-45f3-84ce-874911bd44c5" />
+
 
 ## VLAN Design
 - VLAN 10 = Sales
