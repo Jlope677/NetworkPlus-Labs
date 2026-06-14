@@ -39,6 +39,8 @@ PC1
 192.168.20.10
 ```
 
+<img width="452" height="437" alt="lab4" src="https://github.com/user-attachments/assets/9ec7c3c7-167d-4ed9-82ed-27e6f09917fb" />
+
 ---
 
 # Devices Used
@@ -80,6 +82,9 @@ PC1
 | Subnet Mask | 255.255.255.0 |
 | Default Gateway | 192.168.10.1 |
 
+<img width="1387" height="642" alt="pc0" src="https://github.com/user-attachments/assets/a7f00fb3-4e1b-4ccc-9b57-b2efeeeb475e" />
+
+
 ## PC1
 
 | Setting | Value |
@@ -87,6 +92,9 @@ PC1
 | IP Address | 192.168.20.10 |
 | Subnet Mask | 255.255.255.0 |
 | Default Gateway | 192.168.20.1 |
+
+
+<img width="1452" height="652" alt="pc1" src="https://github.com/user-attachments/assets/3c70b52c-e31f-456c-963f-23708578b8d6" />
 
 ---
 
@@ -104,6 +112,8 @@ name Sales
 vlan 20
 name HR
 ```
+
+<img width="570" height="116" alt="create vlans" src="https://github.com/user-attachments/assets/565106ba-3e25-4a10-978c-1d2383c16eda" />
 
 ## Configure Access Ports
 
@@ -123,12 +133,16 @@ switchport mode access
 switchport access vlan 20
 ```
 
+<img width="622" height="172" alt="assign ports" src="https://github.com/user-attachments/assets/a51f98fd-7f3c-4034-9c13-a4c6edaa548b" />
+
 ## Configure Trunk Port
 
 ```bash
 interface fa0/24
 switchport mode trunk
 ```
+
+<img width="380" height="47" alt="configure trunk" src="https://github.com/user-attachments/assets/8b7d51ae-1f1d-4df9-84b9-5f8422262903" />
 
 ---
 
@@ -162,6 +176,8 @@ Encapsulation: 802.1Q
 Allowed VLANs: 1-1005
 ```
 
+<img width="771" height="464" alt="verify" src="https://github.com/user-attachments/assets/811d9fb3-e194-45bd-a373-76295e1fe9a3" />
+
 ---
 
 # Router Configuration
@@ -175,6 +191,7 @@ configure terminal
 interface g0/0/0
 no shutdown
 ```
+<img width="862" height="172" alt="activate interface" src="https://github.com/user-attachments/assets/3e5f5b1c-d439-4001-be21-aac2ed356389" />
 
 ## Configure VLAN 10 Gateway
 
@@ -183,6 +200,7 @@ interface g0/0/0.10
 encapsulation dot1Q 10
 ip address 192.168.10.1 255.255.255.0
 ```
+<img width="872" height="196" alt="vlan 10 gateway" src="https://github.com/user-attachments/assets/bae2b92a-9621-4326-b6fe-0002e5c6ef8b" />
 
 ## Configure VLAN 20 Gateway
 
@@ -191,6 +209,8 @@ interface g0/0/0.20
 encapsulation dot1Q 20
 ip address 192.168.20.1 255.255.255.0
 ```
+
+<img width="827" height="141" alt="vlan 20 gateway" src="https://github.com/user-attachments/assets/7fcb9166-b1e2-4120-85f7-345f4a83ef5b" />
 
 ---
 
@@ -206,6 +226,8 @@ ping 192.168.10.1
 
 Result: Successful
 
+<img width="777" height="452" alt="ping from pc 0" src="https://github.com/user-attachments/assets/987f7c3d-998c-46bb-acc5-1ddd8419edba" />
+
 ## Test 2 - VLAN 20 Gateway
 
 From PC1:
@@ -216,6 +238,8 @@ ping 192.168.20.1
 
 Result: Successful
 
+<img width="892" height="510" alt="ping from pc 1" src="https://github.com/user-attachments/assets/777207c5-c019-4d94-982e-8d6cbf07559e" />
+
 ## Test 3 - Inter-VLAN Communication
 
 From PC0:
@@ -225,6 +249,8 @@ ping 192.168.20.10
 ```
 
 Result: Successful
+
+<img width="577" height="305" alt="inter vlan test" src="https://github.com/user-attachments/assets/a5e0cc02-1bf0-452c-911c-a47b664dd970" />
 
 ---
 
@@ -316,17 +342,3 @@ Verified:
 - Packet Tracer Design
 
 ---
-
-# Screenshots
-
-1. Topology Diagram
-2. VLAN Creation
-3. Access Port Configuration
-4. Trunk Configuration
-5. Router Interface Activation
-6. Router Subinterface Configuration
-7. show vlan brief
-8. show interfaces trunk
-9. show ip interface
-10. Gateway Ping Tests
-11. Successful Inter-VLAN Ping
