@@ -276,11 +276,6 @@ Result: Successful
 * Router subinterfaces allow multiple VLANs to use one physical interface.
 * Inter-VLAN routing enables communication between VLANs.
 
-
-## Inter-VLAN Routing
-
-The process of routing traffic between VLANs.
-
 ---
 
 # Troubleshooting Performed
