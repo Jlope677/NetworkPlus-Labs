@@ -267,36 +267,15 @@ Result: Successful
 
 # Key Concepts Learned
 
-## VLAN
+Key Concepts Learned
+VLANs create logical network separation.
+Access ports carry traffic for a single VLAN.
+Trunk ports carry traffic for multiple VLANs.
+802.1Q provides VLAN tagging.
+Default gateways enable communication outside the local subnet.
+Router subinterfaces allow multiple VLANs to use one physical interface.
+Inter-VLAN routing enables communication between VLANs.
 
-A logical network created on a switch.
-
-## Access Port
-
-A switch port assigned to a single VLAN.
-
-## Trunk Port
-
-A switch port that carries multiple VLANs.
-
-## 802.1Q
-
-The VLAN tagging protocol used on trunk links.
-
-## Default Gateway
-
-The device used to reach networks outside the local subnet.
-
-## Router Subinterface
-
-A logical interface configured on a router physical interface.
-
-Examples:
-
-```text
-G0/0/0.10
-G0/0/0.20
-```
 
 ## Inter-VLAN Routing
 
