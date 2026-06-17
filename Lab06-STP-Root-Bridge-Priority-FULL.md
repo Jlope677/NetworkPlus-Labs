@@ -19,13 +19,8 @@ This lab demonstrates:
 
 # Topology
 
-```text
-       Switch0
-       /     \
-      /       \
-     /         \
-Switch1-------Switch2
-```
+<img width="695" height="510" alt="tapology" src="https://github.com/user-attachments/assets/63c4b8fa-f27a-42ad-a8a7-d2cf3e476fa6" />
+
 
 Three Cisco 2960 switches were connected in a triangle topology.
 
@@ -89,6 +84,14 @@ Default Priority:
 
 ---
 
+<img width="756" height="340" alt="Verification Command switch0" src="https://github.com/user-attachments/assets/53b9fabf-a0c4-4dd2-ac85-43726f57a4a5" />
+
+<img width="712" height="362" alt="Verification Command switch1" src="https://github.com/user-attachments/assets/60a7c5bc-c767-40f7-bb30-19ac81ffce54" />
+
+<img width="682" height="352" alt="Verification Command switch2" src="https://github.com/user-attachments/assets/5b6e229b-bf3a-4a08-8016-7d02c52a9cb1" />
+
+
+
 # Configuration
 
 ## Method 1 - Manual Priority
@@ -106,6 +109,8 @@ spanning-tree vlan 1 root primary
 ```
 
 ---
+
+<img width="872" height="277" alt="step2" src="https://github.com/user-attachments/assets/711becec-e337-41c8-a1f9-cb25b0459491" />
 
 # Verification
 
@@ -128,6 +133,7 @@ This bridge is the root
 appeared on Switch1.
 
 ---
+<img width="807" height="352" alt="verify switch1" src="https://github.com/user-attachments/assets/71e5ec88-e81a-4747-bc49-9a5d2ec8bb2b" />
 
 # STP Topology Changes
 
@@ -146,6 +152,14 @@ Switch1 = Root Bridge
 STP recalculated the network topology and updated port roles.
 
 ---
+
+<img width="677" height="485" alt="after convergence" src="https://github.com/user-attachments/assets/c0661467-b288-4dc7-9887-b9c6d9d9f714" />
+<img width="807" height="352" alt="verify switch1" src="https://github.com/user-attachments/assets/2b457d19-2d3c-4b0c-96d5-4b819f119866" />
+<img width="742" height="621" alt="verify switch0" src="https://github.com/user-attachments/assets/e32a04a2-a227-4711-8622-4b79824be853" />
+<img width="917" height="462" alt="verify switch2" src="https://github.com/user-attachments/assets/bfb68178-3257-4d8e-a820-a945d150e8c1" />
+
+
+
 
 # Key Concepts Learned
 
@@ -181,24 +195,6 @@ The process of recalculating the STP topology after a change.
 
 ---
 
-# Questions Answered
-
-1. Which switch was Root before?
-   - Switch0
-
-2. Which switch became Root after?
-   - Switch1
-
-3. Which port became blocked?
-   - Alternate Port on the non-root switch
-
-4. Did the blocked port change?
-   - Yes, STP recalculated port roles after the Root Bridge changed.
-
-5. Why did STP recalculate?
-   - Because the Bridge ID changed when the priority was lowered.
-
----
 
 # Troubleshooting Performed
 
@@ -238,14 +234,4 @@ Verified:
 
 ---
 
-# Screenshots
 
-1. Initial Topology
-2. Initial Root Bridge Election
-3. Switch0 STP Output
-4. Switch1 STP Output
-5. Switch2 STP Output
-6. Priority Configuration
-7. New Root Bridge Election
-8. Updated STP Output
-9. Convergence Verification
