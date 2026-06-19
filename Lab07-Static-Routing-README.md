@@ -18,13 +18,8 @@ This lab demonstrates:
 
 # Topology
 
-```text
-PC0 ---- R1 ---- R2 ---- PC1
+<img width="1157" height="382" alt="topology" src="https://github.com/user-attachments/assets/9df3244f-0282-443d-a73a-50436b7e0746" />
 
-PC0 Fa0 -> R1 G0/0/0
-R1 G0/0/1 -> R2 G0/0/0
-R2 G0/0/1 -> PC1 Fa0
-```
 
 ---
 
@@ -89,6 +84,8 @@ ip address 10.0.0.1 255.255.255.252
 no shutdown
 ```
 
+<img width="857" height="377" alt="configure router1" src="https://github.com/user-attachments/assets/4a709b73-037f-42e0-8883-2918a09f28e1" />
+
 ---
 
 # Configure R2
@@ -107,6 +104,8 @@ interface g0/0/1
 ip address 192.168.2.1 255.255.255.0
 no shutdown
 ```
+
+<img width="1072" height="425" alt="configure R2" src="https://github.com/user-attachments/assets/ff8507a3-6207-4123-8123-5341e71036dd" />
 
 ---
 
@@ -128,6 +127,11 @@ ping 10.0.0.1
 
 Result: Successful
 
+
+<img width="787" height="147" alt="verify direct connectivity r1" src="https://github.com/user-attachments/assets/f2e47d0e-980d-4a75-a0e8-46efdbc2b95f" />
+
+<img width="742" height="167" alt="verify direct connectivity r2" src="https://github.com/user-attachments/assets/3ad88ea7-4e0a-442f-9e5a-2576e8e8e2ea" />
+
 ---
 
 # Initial End-to-End Test
@@ -145,6 +149,9 @@ Destination Host Unreachable
 Reason:
 
 The routers only knew their directly connected networks and had no route to the remote LAN.
+
+
+<img width="936" height="397" alt="Test End-to-End" src="https://github.com/user-attachments/assets/3ed57a44-1c1a-4df4-9276-a879161984da" />
 
 ---
 
@@ -170,6 +177,12 @@ Meaning:
 
 Traffic destined for the 192.168.1.0/24 network is forwarded to R1.
 
+
+<img width="672" height="137" alt="Configure Static Routes R1" src="https://github.com/user-attachments/assets/99b12016-94a3-4705-bba9-66dae9827b28" />
+
+<img width="591" height="97" alt="Configure Static Routes R2" src="https://github.com/user-attachments/assets/2382daa3-6b09-46d8-a217-11e08d7c7d4b" />
+
+
 ---
 
 # Verify Routing Tables
@@ -188,6 +201,10 @@ R2:
 S 192.168.1.0/24 [1/0] via 10.0.0.1
 ```
 
+<img width="706" height="307" alt="Verify Routes R1" src="https://github.com/user-attachments/assets/6204fe97-5b7c-49a9-af78-72450e2ef8b5" />
+<img width="860" height="337" alt="Verify Routes R2" src="https://github.com/user-attachments/assets/189f3921-824e-44d8-9e3d-e85dc3297a7d" />
+
+
 ---
 
 # Final Connectivity Test
@@ -201,6 +218,9 @@ ping 192.168.2.10
 Result:
 
 ✅ Successful
+
+
+<img width="576" height="282" alt="test again pc0" src="https://github.com/user-attachments/assets/f04b561e-fee4-40de-bc5c-4d42f98e9f79" />
 
 ---
 
@@ -284,16 +304,6 @@ Static Route = 1
 
 ---
 
-# Screenshot Checklist
-
-- Topology Diagram
-- PC0 Configuration
-- PC1 Configuration
-- R1 Interface Configuration
-- R2 Interface Configuration
-- Successful Router-to-Router Ping
-- Failed End-to-End Ping
-- Static Route Configuration on R1
 - Static Route Configuration on R2
 - show ip route on R1
 - show ip route on R2
