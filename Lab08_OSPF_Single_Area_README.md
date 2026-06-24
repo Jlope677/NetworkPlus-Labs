@@ -34,6 +34,8 @@ Fa0
  |
 PC1 (192.168.2.10)
 
+<img width="902" height="292" alt="topology" src="https://github.com/user-attachments/assets/425e6e58-37e3-4860-ae93-cdf965000267" />
+
 ---
 
 # Devices Used
@@ -73,6 +75,8 @@ interface g0/0/1
 ip address 10.0.0.1 255.255.255.252
 no shutdown
 
+<img width="837" height="370" alt="configure R1" src="https://github.com/user-attachments/assets/0813717a-b07b-47bf-a140-682c155c647d" />
+
 ## Configure R2
 
 interface g0/0/0
@@ -82,6 +86,8 @@ no shutdown
 interface g0/0/1
 ip address 192.168.2.1 255.255.255.0
 no shutdown
+
+<img width="882" height="401" alt="configure R2" src="https://github.com/user-attachments/assets/6eccc929-58a6-42df-b4bb-dccf038d74eb" />
 
 ---
 
@@ -93,11 +99,15 @@ router ospf 1
 network 192.168.1.0 0.0.0.255 area 0
 network 10.0.0.0 0.0.0.3 area 0
 
+<img width="595" height="155" alt="Configure OSPF on R1" src="https://github.com/user-attachments/assets/4dbdb1b0-bb85-4d6c-bca0-6582c62a7440" />
+
 ## R2
 
 router ospf 1
 network 192.168.2.0 0.0.0.255 area 0
 network 10.0.0.0 0.0.0.3 area 0
+
+<img width="1037" height="162" alt="Configure OSPF on R2" src="https://github.com/user-attachments/assets/0b6d7300-feff-4908-a1a7-b92892fe3614" />
 
 ---
 
@@ -139,6 +149,8 @@ Result:
 
 Neighbor state reached FULL.
 
+<img width="930" height="107" alt="Verify OSPF Neighbor R1" src="https://github.com/user-attachments/assets/d817a407-3144-497a-bece-866c6a9c4f20" />
+
 ## Verify Routing Table
 
 show ip route
@@ -150,9 +162,15 @@ O 192.168.2.0/24
 
 O = OSPF Learned Route
 
+<img width="792" height="304" alt="Verify Learned Routes R1" src="https://github.com/user-attachments/assets/73e3c8be-3abe-44f0-a5e9-405f7a40dc9d" />
+<img width="720" height="305" alt="Verify Learned Routes R2" src="https://github.com/user-attachments/assets/086d493d-d056-40ff-a79e-fcf2bca5e43c" />
+
+
 ## Verify Connectivity
 
 PC0 successfully pinged PC1.
+
+<img width="740" height="652" alt="final test" src="https://github.com/user-attachments/assets/b442c892-4718-496e-b3a6-ce01e62033d0" />
 
 ---
 
