@@ -60,6 +60,9 @@ PC1 (192.168.2.10)
 ```
 
 ---
+<img width="902" height="292" alt="topology" src="https://github.com/user-attachments/assets/f3aae94a-7872-4610-8800-f2d04ba0c729" />
+
+---
 
 # Devices Used
 
@@ -131,10 +134,8 @@ interface g0/0/1
  ip address 10.0.0.1 255.255.255.252
  no shutdown
 ```
+<img width="837" height="370" alt="configure R1" src="https://github.com/user-attachments/assets/04dd3544-b740-4ff0-9d61-71a4f1316e51" />
 
-### Screenshot
-
-![Configure R1](images/configure-r1.png)
 
 ---
 
@@ -150,9 +151,8 @@ interface g0/0/1
  no shutdown
 ```
 
-### Screenshot
+<img width="882" height="401" alt="configure R2" src="https://github.com/user-attachments/assets/1f9f3354-37b0-4387-8008-6cadca7a4ffa" />
 
-![Configure R2](images/configure-r2.png)
 
 ---
 
@@ -167,9 +167,8 @@ network 192.168.1.0 0.0.0.255 area 0
 network 10.0.0.0 0.0.0.3 area 0
 ```
 
-### Screenshot
+<img width="595" height="155" alt="Configure OSPF on R1" src="https://github.com/user-attachments/assets/383d5071-1939-4d9a-8327-fb8b3812aa0c" />
 
-![OSPF R1](images/ospf-r1.png)
 
 ---
 
@@ -182,9 +181,8 @@ network 192.168.2.0 0.0.0.255 area 0
 network 10.0.0.0 0.0.0.3 area 0
 ```
 
-### Screenshot
+<img width="1037" height="162" alt="Configure OSPF on R2" src="https://github.com/user-attachments/assets/a7a70dc9-643c-459a-a892-a52868557fe2" />
 
-![OSPF R2](images/ospf-r2.png)
 
 ---
 
@@ -230,6 +228,7 @@ Without this network statement, OSPF neighbors would never form.
 show ip ospf neighbor
 ```
 
+
 ### Expected Result
 
 ```text
@@ -242,9 +241,9 @@ This confirms:
 - Database synchronization completed
 - Route exchange can occur
 
-### Screenshot
 
-![Neighbor Verification](images/neighbor-r1.png)
+<img width="930" height="107" alt="Verify OSPF Neighbor R1" src="https://github.com/user-attachments/assets/fffb2064-0551-4c8a-8ca5-5389274f8c61" />
+
 
 ---
 
@@ -269,11 +268,10 @@ O = OSPF Learned Route
 
 The route was dynamically learned from a neighboring router.
 
-### Screenshots
+<img width="792" height="304" alt="Verify Learned Routes R1" src="https://github.com/user-attachments/assets/5f8fa58b-73ec-42bf-9ccb-f0adb2fb8fee" />
+<img width="720" height="305" alt="Verify Learned Routes R2" src="https://github.com/user-attachments/assets/ed79a08e-eb5d-4824-8159-a767703e16b2" />
 
-![Route Table R1](images/routes-r1.png)
 
-![Route Table R2](images/routes-r2.png)
 
 ---
 
@@ -289,9 +287,8 @@ ping 192.168.2.10
 
 Successful communication between both LANs.
 
-### Screenshot
+<img width="740" height="652" alt="final test" src="https://github.com/user-attachments/assets/42f3448e-dee5-4348-af9a-50f7794d72f5" />
 
-![Ping Test](images/final-test.png)
 
 ---
 
