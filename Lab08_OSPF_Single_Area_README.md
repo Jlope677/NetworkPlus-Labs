@@ -72,9 +72,11 @@ no shutdown
 interface g0/0/1
 ip address 10.0.0.1 255.255.255.252
 no shutdown
----
-<img width="837" height="370" alt="configure R1" src="https://github.com/user-attachments/assets/0813717a-b07b-47bf-a140-682c155c647d" />
 
+---
+
+<img width="837" height="370" alt="configure R1" src="https://github.com/user-attachments/assets/0813717a-b07b-47bf-a140-682c155c647d" />
+---
 ## Configure R2
 
 interface g0/0/0
