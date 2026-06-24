@@ -34,8 +34,6 @@ Fa0
  |
 PC1 (192.168.2.10)
 
-<img width="902" height="292" alt="topology" src="https://github.com/user-attachments/assets/425e6e58-37e3-4860-ae93-cdf965000267" />
-
 ---
 
 # Devices Used
