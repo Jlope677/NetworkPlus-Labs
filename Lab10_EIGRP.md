@@ -20,15 +20,24 @@ learned routes.
 
 ## Topology
 
-``` text
-                R2
-              /    \
-             /      \
-           R1--------R3
+```text
+          R2
+         /  \
+        /    \
+      R1------R3
 ```
 
-Networks: - R1-R2: 10.0.12.0/30 - R1-R3: 10.0.13.0/30 - R2-R3:
-10.0.23.0/30
+This lab uses the same three-router redundant topology introduced in **Lab 09 – OSPF Failover**.
+
+### Networks
+
+- R1 ↔ R2 : 10.0.12.0/30
+- R1 ↔ R3 : 10.0.13.0/30
+- R2 ↔ R3 : 10.0.23.0/30
+
+To recreate the topology, interface IP addressing, and physical connections, refer to **Lab 09**.
+
+Only the routing protocol changes in this lab (OSPF → EIGRP).
 
 ------------------------------------------------------------------------
 
@@ -127,13 +136,4 @@ indicate load balancing.
 
 ------------------------------------------------------------------------
 
-## Suggested Screenshots
 
-1.  Topology
-2.  Remove OSPF
-3.  Configure EIGRP R1
-4.  Configure EIGRP R2
-5.  Configure EIGRP R3
-6.  show ip eigrp neighbors
-7.  show ip eigrp topology
-8.  show ip route
