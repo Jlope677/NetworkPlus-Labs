@@ -57,6 +57,16 @@ Verify:
 show ip protocols
 ```
 
+
+<img width="761" height="252" alt="erase the ospf R1" src="https://github.com/user-attachments/assets/b2c67ccb-45e8-49c4-ba70-4abe73598f1b" />
+
+<img width="707" height="172" alt="erase the ospf R2" src="https://github.com/user-attachments/assets/2f20509d-9775-4bcf-b815-9ffcd90bf2a7" />
+
+
+<img width="747" height="227" alt="erase the ospf R3" src="https://github.com/user-attachments/assets/538dbeee-47d0-42a2-b8e3-ac42fd8ae4f7" />
+
+
+
 ------------------------------------------------------------------------
 
 ## Step 2 - Configure EIGRP
@@ -70,6 +80,11 @@ network 10.0.12.0 0.0.0.3
 network 10.0.13.0 0.0.0.3
 ```
 
+
+<img width="592" height="125" alt="Configure EIGRP R1" src="https://github.com/user-attachments/assets/728f4869-4f85-4ac7-8fa9-a08c9a2d184a" />
+
+
+
 ### R2
 
 ``` bash
@@ -79,6 +94,9 @@ network 10.0.12.0 0.0.0.3
 network 10.0.23.0 0.0.0.3
 ```
 
+<img width="952" height="147" alt="Configure EIGRP R2" src="https://github.com/user-attachments/assets/b6a25b2f-a57a-4caa-9fb8-2e518d781526" />
+
+
 ### R3
 
 ``` bash
@@ -87,6 +105,7 @@ no auto-summary
 network 10.0.13.0 0.0.0.3
 network 10.0.23.0 0.0.0.3
 ```
+<img width="872" height="221" alt="Configure EIGRP R3" src="https://github.com/user-attachments/assets/b68104e3-172f-42d4-9b36-dfdcec6b3d86" />
 
 Reason: - AS 100 must match on every router. - The network statements
 enable EIGRP on matching interfaces. - `no auto-summary` prevents
@@ -113,6 +132,12 @@ learned by EIGRP are marked with **D**. - Multiple equal-cost routes
 indicate load balancing.
 
 ------------------------------------------------------------------------
+
+<img width="877" height="674" alt="Verify eigrp R1" src="https://github.com/user-attachments/assets/5a91edc6-ed0a-456e-82d3-efb20d53cd71" />
+<img width="771" height="665" alt="Verify eigrp R2" src="https://github.com/user-attachments/assets/4a60e099-ace7-47b0-88d4-8b4f6597bc2f" />
+<img width="737" height="684" alt="Verify eigrp R3" src="https://github.com/user-attachments/assets/fd8d724e-3f69-4c2c-9fa8-b04382fdf039" />
+
+
 
 ## Troubleshooting Performed
 
