@@ -63,6 +63,8 @@ R1 -> R3 -> R2
 ```
 
 ---
+<img width="671" height="382" alt="new topology" src="https://github.com/user-attachments/assets/0b493882-0f5a-49d6-9cd8-f46a807598b4" />
+
 
 ## Pre-Failure Verification
 
@@ -96,6 +98,8 @@ R1 had two EIGRP neighbors:
 
 This confirmed that R1 had neighbor relationships with both R2 and R3.
 
+<img width="877" height="674" alt="Verify eigrp R1" src="https://github.com/user-attachments/assets/9abdf08a-5de7-492b-8ce7-eeaa259260ea" />
+
 ### R2
 
 R2 had two EIGRP neighbors:
@@ -105,6 +109,8 @@ R2 had two EIGRP neighbors:
 
 This confirmed that R2 had neighbor relationships with both R1 and R3.
 
+<img width="771" height="665" alt="Verify eigrp R2" src="https://github.com/user-attachments/assets/84725a04-c280-4459-ad84-9c691db0d488" />
+
 ### R3
 
 R3 had two EIGRP neighbors:
@@ -113,6 +119,8 @@ R3 had two EIGRP neighbors:
 - 10.0.23.1 through G0/0/0
 
 This confirmed that R3 had neighbor relationships with both R1 and R2.
+
+<img width="737" height="684" alt="Verify eigrp R3" src="https://github.com/user-attachments/assets/0f99c632-80fd-47d1-88b7-a5c8c3c0fbf1" />
 
 ---
 
@@ -164,6 +172,7 @@ configure terminal
 interface g0/0/0
 shutdown
 ```
+<img width="902" height="296" alt="Simulate Link Failure R1" src="https://github.com/user-attachments/assets/4176fc46-af89-4d46-bbaa-d20c5c7334bf" />
 
 ### Reasoning
 
@@ -208,6 +217,8 @@ After the failure, R1 lost the neighbor relationship with R2:
 
 R1 continued routing through R3.
 
+<img width="825" height="635" alt="link failure verify R1" src="https://github.com/user-attachments/assets/b4a104ad-211f-4f1b-9841-786f15f9a7ef" />
+
 ### R2
 
 After the failure, R2 lost the neighbor relationship with R1:
@@ -217,6 +228,8 @@ After the failure, R2 lost the neighbor relationship with R1:
 
 R2 continued routing through R3.
 
+<img width="912" height="612" alt="link failure verify R2" src="https://github.com/user-attachments/assets/ba28d25b-2bf2-4700-b368-fec993b30aa2" />
+
 ### R3
 
 R3 remained connected to both routers:
@@ -225,6 +238,8 @@ R3 remained connected to both routers:
 - Neighbor to R2 remained active.
 
 R3 became the transit path between R1 and R2.
+
+<img width="821" height="630" alt="link failure verify R3" src="https://github.com/user-attachments/assets/98937aaf-d4da-46c0-8480-dea087cdfbaf" />
 
 ---
 
@@ -362,13 +377,3 @@ Verified:
 
 ---
 
-## Screenshot Checklist
-
-- Original EIGRP verification on R1
-- Original EIGRP verification on R2
-- Original EIGRP verification on R3
-- Simulated link failure on R1
-- Updated topology after link failure
-- Post-failure verification on R1
-- Post-failure verification on R2
-- Post-failure verification on R3
