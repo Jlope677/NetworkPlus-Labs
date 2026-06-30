@@ -1,4 +1,4 @@
-# Lab 13 -- EtherChannel Failover & Troubleshooting
+# Lab 14 -- EtherChannel Failover & Troubleshooting
 
 ## Objective
 
@@ -20,7 +20,7 @@ link while maintaining connectivity over the remaining bundled link.
        PC0                     PC1
 ```
 
-> EtherChannel configuration was completed in Lab 12.
+> EtherChannel configuration was completed in Lab 13.
 
 ## Verification Before Failure
 
