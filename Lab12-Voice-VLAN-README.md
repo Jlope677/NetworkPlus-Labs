@@ -55,6 +55,10 @@ Cisco 7960 IP Phone → Voice VLAN 20
   PC0      192.168.10.10/24   10
   PC1      192.168.10.20/24   10
 
+<img width="857" height="322" alt="PC0 configuration" src="https://github.com/user-attachments/assets/f6726a5b-46ec-44fa-af1f-73a749bd0491" />
+<img width="857" height="315" alt="PC1 configuration" src="https://github.com/user-attachments/assets/203c0ba6-0306-4b9c-98de-ef156fc1de2a" />
+
+
 ## Configuration
 
 ``` cisco
@@ -73,6 +77,12 @@ interface fa0/2
  switchport mode access
  switchport access vlan 10
 ```
+<img width="622" height="167" alt="Create the VLANs" src="https://github.com/user-attachments/assets/e97e45b4-b073-49be-aa39-c7cbe629614c" />
+
+<img width="582" height="147" alt="Configure the Switch Port" src="https://github.com/user-attachments/assets/3c70daee-181a-41d2-ae7e-dab13fbb99c4" />
+<img width="592" height="147" alt="Configure the Switch Port fa02" src="https://github.com/user-attachments/assets/5989621f-228b-4899-8d88-ff4610fc9559" />
+
+
 
 ## Verification
 
@@ -83,6 +93,11 @@ show running-config
 
 Expected: - VLAN 10 = DATA - VLAN 20 = VOICE - Fa0/1 carries Data VLAN
 10 and Voice VLAN 20.
+
+<img width="797" height="272" alt="verify" src="https://github.com/user-attachments/assets/59459942-f734-4f38-bf78-ce4c7e376db9" />
+<img width="482" height="472" alt="verify 2" src="https://github.com/user-attachments/assets/639beafa-6a3c-4a8c-b238-464e0a2651ce" />
+
+
 
 ## Packet Simulation
 
