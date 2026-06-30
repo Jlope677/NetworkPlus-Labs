@@ -67,10 +67,12 @@ Verify STP references Port-channel1 instead of individual interfaces.
 ### show interfaces trunk
 
 Verify Po1 is trunking.
+
 ## Switch1
 <img width="655" height="311" alt="etherchannel summary" src="https://github.com/user-attachments/assets/9fd767b4-56e4-4413-804e-2862d7f3a3b6" />
 <img width="645" height="455" alt="show interface port-channel 1" src="https://github.com/user-attachments/assets/d8088cc9-0897-45a9-9575-bca9b960fe74" />
 <img width="760" height="477" alt="spanning tree" src="https://github.com/user-attachments/assets/b5955b31-79a7-4e9d-8d2f-46f527b81ba4" />
+
 ## Switch2
 <img width="671" height="309" alt="etherchannel summary(2)" src="https://github.com/user-attachments/assets/1edde30f-fe54-4e3a-8235-b5ee919f12de" />
 <img width="680" height="467" alt="show interface port-channel (2)" src="https://github.com/user-attachments/assets/24db0b17-412a-437f-8e11-93c8f7965b58" />
