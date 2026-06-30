@@ -17,24 +17,35 @@ VLAN while voice traffic uses a separate Voice VLAN.
 
 ## Topology
 
-``` text
-           VLAN 10 (DATA)
-PC1 ------------------+
-                      |
-                 +----+----+
-                 | Switch  |
-                 +----+----+
-                      |
-                    Fa0/1
-                      |
-               +-------------+
-               | Cisco 7960  |
-               +-------------+
-                      |
-                     PC0
+```text
 
-PC0 = VLAN 10
-Phone = Voice VLAN 20
+                    VLAN 10 (DATA)
+
+ PC1
+Fa0
+ |
+ |
+Fa0/2
++-------------+
+|   Switch    |
++-------------+
+      |
+    Fa0/1
+      |
+  Switch Port
++----------------------+
+| Cisco 7960 IP Phone  |
++----------------------+
+      |
+    PC Port
+      |
+     Fa0
+      |
+     PC0
+
+PC1 (192.168.10.20) → VLAN 10
+PC0 (192.168.10.10) → VLAN 10
+Cisco 7960 IP Phone → Voice VLAN 20
 ```
 
 ## IP Addressing
