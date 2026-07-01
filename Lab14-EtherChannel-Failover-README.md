@@ -170,24 +170,52 @@ shutdown
 ```
 <img width="916" height="226" alt="simulate a cable failure" src="https://github.com/user-attachments/assets/0eea529e-c236-4139-b83e-18e21af8e218" />
 
-## Verification After Failure
+### Verification After Failure
 
-``` cisco
+After shutting down **Fa0/1** on Switch 1, verify that the EtherChannel remains operational and that the Port-Channel continues forwarding traffic using the remaining active member link.
+
+### Commands Used
+
+```cisco
 show etherchannel summary
+show interface port-channel 1
 ```
 
-Expected:
+### Verification Results
 
-``` text
-Po1(SU)
-Fa0/1(D)
-Fa0/2(P)
-```
+- ✅ Port-Channel 1 (Po1) remains operational.
+- ✅ Fa0/1 is no longer an active member of the EtherChannel.
+- ✅ Fa0/2 remains bundled and continues forwarding traffic.
+- ✅ Port-channel interface remains **Up/Up**.
+- ✅ Network connectivity is maintained despite the loss of one physical link.
 
-Port-channel remains Up/Up and connectivity continues.
+---
 
-<img width="621" height="387" alt="verify port channel (1)" src="https://github.com/user-attachments/assets/78cf1e86-b625-43de-96ab-bc8515ba162f" />
-<img width="672" height="397" alt="verify port channel (2)" src="https://github.com/user-attachments/assets/8eb39368-499c-4e6d-b6d1-39352481d91c" />
+### Switch 1 Verification
+
+#### show etherchannel summary
+
+<img width="692" height="356" alt="down" src="https://github.com/user-attachments/assets/06597c1d-9e8f-4a8d-a6f9-ddafcd3436b9" />
+
+
+#### show interface port-channel 1
+<img width="621" height="387" alt="verify port channel (1)" src="https://github.com/user-attachments/assets/2c30b783-97dd-40ac-8432-54847f2692b4" />
+
+
+
+---
+
+### Switch 2 Verification
+
+#### show etherchannel summary
+
+<img width="662" height="332" alt="down2" src="https://github.com/user-attachments/assets/6930e27e-fcd6-436b-ac28-7a33be8e1e8f" />
+
+
+#### show interface port-channel 1
+<img width="672" height="397" alt="verify port channel (2)" src="https://github.com/user-attachments/assets/a9654fdb-ba98-407d-8d52-0552ab89a072" />
+
+
 
 
 ## What I Learned
