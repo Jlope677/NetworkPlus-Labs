@@ -1,5 +1,5 @@
 
-# Lab 14 – EtherChannel Troubleshooting
+# Lab 15 – EtherChannel Troubleshooting
 
 ## Objective
 
@@ -30,14 +30,14 @@ After a scheduled maintenance window, users report intermittent connectivity bet
 
 Complete these labs first:
 
-## Lab 12 – EtherChannel (LACP Configuration)
+## Lab 13 – EtherChannel (LACP Configuration)
 
 - Configure an LACP EtherChannel
 - Configure Port-channel1
 - Configure trunking
 - Verify the EtherChannel forms successfully
 
-## Lab 13 – EtherChannel Failover
+## Lab 14 – EtherChannel Failover
 
 - Configure PC access ports
 - Assign IP addresses
@@ -45,7 +45,7 @@ Complete these labs first:
 - Simulate a member link failure
 - Verify failover
 
-This lab reuses the completed topology from Lab 13.
+This lab reuses the completed topology from Lab 14.
 
 ---
 
