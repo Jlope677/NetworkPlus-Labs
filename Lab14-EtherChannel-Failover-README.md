@@ -116,37 +116,35 @@ show spanning-tree
 
 ---
 
-### Switch 1 Verification
+## Switch 1 Verification
 
-#### show etherchannel summary
+### show etherchannel summary
 
 <img width="655" height="311" alt="etherchannel summary" src="https://github.com/user-attachments/assets/6fd94f1a-10bc-4f59-8f5e-20c9d6f0d12f" />
 
-#### show interface port-channel 1
+### show interface port-channel 1
 
 <img width="645" height="455" alt="show interface port-channel 1" src="https://github.com/user-attachments/assets/66a0c356-700a-4bd8-9d4b-cc4f66dd7e38" />
 
-#### show spanning-tree
+### show spanning-tree & show interfaces trunk
 
 <img width="760" height="477" alt="spanning tree" src="https://github.com/user-attachments/assets/8f0629fc-4fe0-481d-b2b0-055372cb8c5c" />
 
 ---
 
-### Switch 2 Verification
+## Switch 2 Verification
 
-#### show etherchannel summary
+### show etherchannel summary
 
 <img width="671" height="309" alt="etherchannel summary(2)" src="https://github.com/user-attachments/assets/f88a70c3-6003-4c90-b378-c34bb3ec1be6" />
 
-#### show interface port-channel 1
+### show interface port-channel 1
 
 <img width="680" height="467" alt="show interface port-channel (2)" src="https://github.com/user-attachments/assets/67c3d523-a5e0-4e71-a50e-b1121ff2a4c8" />
 
-#### show spanning-tree
+### show spanning-tree & show interfaces trunk
 
 <img width="735" height="491" alt="verify(2)" src="https://github.com/user-attachments/assets/bc4cb61e-e74c-4477-85f6-f40697f60044" />
-
-
 
 
 
