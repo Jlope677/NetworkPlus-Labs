@@ -87,6 +87,9 @@ On **both** switches:
 interface range fa0/1-2
  channel-group 1 mode passive
 ```
+<img width="637" height="277" alt="etherchannel fail" src="https://github.com/user-attachments/assets/f4c00b24-38b8-4223-bd98-528f03b37809" />
+<img width="797" height="545" alt="Configure Switch 2" src="https://github.com/user-attachments/assets/e2cb8340-64e6-4c7b-ac34-10aa9525268a" />
+
 
 ## Verification
 
@@ -97,6 +100,8 @@ show etherchannel summary
 show interfaces trunk
 show running-config
 ```
+<img width="607" height="282" alt="verify fail1" src="https://github.com/user-attachments/assets/66240d3c-fef2-4f57-85fb-3d4b7bfb09ab" />
+<img width="480" height="311" alt="verify fail2" src="https://github.com/user-attachments/assets/ec68e36f-4d2b-4e73-942e-59cdb3d6f9b1" />
 
 ### Expected Results
 
@@ -129,6 +134,7 @@ Resolution:
 interface range fa0/1-2
  channel-group 1 mode active
 ```
+<img width="636" height="242" alt="fix etherchannel" src="https://github.com/user-attachments/assets/0e2fb684-865b-475a-a645-ff84a9016555" />
 
 Verification After Fix:
 
@@ -138,6 +144,7 @@ Po1(SU)
 Fa0/1(P)
 Fa0/2(P)
 ```
+<img width="532" height="282" alt="verify fix" src="https://github.com/user-attachments/assets/987cbc04-44f1-4af3-9207-828c8cc85322" />
 
 ---
 
@@ -156,6 +163,7 @@ interface port-channel1
  switchport mode access
  switchport access vlan 1
 ```
+<img width="590" height="122" alt="create issue #2" src="https://github.com/user-attachments/assets/95ea9a5c-f9ff-478c-82c5-50c8a370f222" />
 
 ### SW2
 
@@ -163,6 +171,7 @@ interface port-channel1
 interface port-channel1
  switchport mode trunk
 ```
+<img width="797" height="545" alt="Configure Switch 2" src="https://github.com/user-attachments/assets/218e4cd6-f79a-4e74-8568-0c2262d082a1" />
 
 ## Verification
 
@@ -173,6 +182,16 @@ show etherchannel summary
 show interfaces trunk
 show running-config
 ```
+<img width="515" height="292" alt="verify issue #2" src="https://github.com/user-attachments/assets/aa21d4c7-73b4-4f1e-801b-7a6f68c2e07b" />
+<img width="422" height="72" alt="verify issue #2(trunk)" src="https://github.com/user-attachments/assets/aa80e940-b214-47ca-86f4-39571d46a4c5" />
+<img width="445" height="467" alt="verify issue #2(running-config)" src="https://github.com/user-attachments/assets/0e7430a1-344d-48e1-991d-67b037e7f595" />
+<img width="521" height="277" alt="verify issue #2(etherchannel)" src="https://github.com/user-attachments/assets/1ce00c38-2a48-4467-939f-fd795eeb0591" />
+<img width="542" height="207" alt="verify issue #2(trunk sw2)" src="https://github.com/user-attachments/assets/f5392010-80c3-43b3-ba34-37346b735875" />
+
+<img width="452" height="455" alt="verify issue #2(running-config2)" src="https://github.com/user-attachments/assets/c8e906a8-d0f9-4731-9b49-8fb7db538908" />
+
+
+
 
 ### Verification Results
 
@@ -222,6 +241,7 @@ Configure both Port-channel interfaces identically.
 interface port-channel1
  switchport mode trunk
 ```
+<img width="492" height="87" alt="issue #2 fix" src="https://github.com/user-attachments/assets/a90a7d72-7b70-4683-bcab-dafce8caba8b" />
 
 Verify:
 
