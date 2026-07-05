@@ -164,7 +164,8 @@ interface range fa0/1-2
  channel-group 1 mode active
 ```
 
->  <img width="532" height="282" alt="verify fix" src="https://github.com/user-attachments/assets/39f10353-ec50-4156-bb21-72f87fcd4ff6" />
+>  <img width="636" height="242" alt="fix etherchannel" src="https://github.com/user-attachments/assets/f6b6a130-a6ec-44b6-a17f-0bfffd5e9c2e" />
+
 
 
 ### Verification After Fix
@@ -176,7 +177,8 @@ Fa0/1(P)
 Fa0/2(P)
 ```
 
-> Insert your verification screenshots here.
+> <img width="532" height="282" alt="verify fix" src="https://github.com/user-attachments/assets/b1782593-0afb-4d9d-ba9e-5f78d8487d08" />
+
 
 ---
 
@@ -217,11 +219,17 @@ show running-config
 ```
 
 > <img width="515" height="292" alt="verify issue #2" src="https://github.com/user-attachments/assets/ee26a797-d45e-457f-8536-edc4b4e52af1" />
+>
 > <img width="422" height="72" alt="verify issue #2(trunk)" src="https://github.com/user-attachments/assets/b3ab519b-fd77-41b3-88b0-cfeb74746890" />
+>
 > <img width="445" height="467" alt="verify issue #2(running-config)" src="https://github.com/user-attachments/assets/f346288f-d392-402f-93a2-5202890ed3d1" />
+>
 > <img width="521" height="277" alt="verify issue #2(etherchannel)" src="https://github.com/user-attachments/assets/8847b738-1d7b-4383-915f-01ca6a7bb884" />
+>
 > <img width="542" height="207" alt="verify issue #2(trunk sw2)" src="https://github.com/user-attachments/assets/8827715a-b623-4cba-ae0d-694fc29c7446" />
+>
 > <img width="452" height="455" alt="verify issue #2(running-config2)" src="https://github.com/user-attachments/assets/6da00ea1-a2a7-49bf-86de-707a0a8a80f6" />
+>
 
 
 
