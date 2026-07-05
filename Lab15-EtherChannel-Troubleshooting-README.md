@@ -111,7 +111,8 @@ interface range fa0/1-2
  channel-group 1 mode passive
 ```
 
-> Insert your configuration screenshots here.
+> <img width="637" height="277" alt="etherchannel fail" src="https://github.com/user-attachments/assets/9121f926-6aff-49a7-acec-6c463944c59f" />
+
 
 ### Verification
 
@@ -121,7 +122,7 @@ show interfaces trunk
 show running-config
 ```
 
-> Insert your verification screenshots here.
+
 
 ### Observed Results
 
