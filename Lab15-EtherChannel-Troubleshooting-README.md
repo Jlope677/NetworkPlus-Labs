@@ -183,9 +183,13 @@ show interfaces trunk
 show running-config
 ```
 <img width="515" height="292" alt="verify issue #2" src="https://github.com/user-attachments/assets/aa21d4c7-73b4-4f1e-801b-7a6f68c2e07b" />
+
 <img width="422" height="72" alt="verify issue #2(trunk)" src="https://github.com/user-attachments/assets/aa80e940-b214-47ca-86f4-39571d46a4c5" />
+
 <img width="445" height="467" alt="verify issue #2(running-config)" src="https://github.com/user-attachments/assets/0e7430a1-344d-48e1-991d-67b037e7f595" />
+
 <img width="521" height="277" alt="verify issue #2(etherchannel)" src="https://github.com/user-attachments/assets/1ce00c38-2a48-4467-939f-fd795eeb0591" />
+
 <img width="542" height="207" alt="verify issue #2(trunk sw2)" src="https://github.com/user-attachments/assets/f5392010-80c3-43b3-ba34-37346b735875" />
 
 <img width="452" height="455" alt="verify issue #2(running-config2)" src="https://github.com/user-attachments/assets/c8e906a8-d0f9-4731-9b49-8fb7db538908" />
