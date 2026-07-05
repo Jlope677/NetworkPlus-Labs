@@ -112,6 +112,8 @@ interface range fa0/1-2
 ```
 
 > <img width="637" height="277" alt="etherchannel fail" src="https://github.com/user-attachments/assets/9121f926-6aff-49a7-acec-6c463944c59f" />
+> <img width="797" height="545" alt="Configure Switch 2" src="https://github.com/user-attachments/assets/02cd907f-dc16-41da-b36f-1b2bce9d0c7d" />
+
 
 
 ### Verification
@@ -121,6 +123,9 @@ show etherchannel summary
 show interfaces trunk
 show running-config
 ```
+
+> <img width="607" height="282" alt="verify fail1" src="https://github.com/user-attachments/assets/0d6a3d36-43c8-4ff3-8586-f02ae3485165" />
+> <img width="480" height="311" alt="verify fail2" src="https://github.com/user-attachments/assets/59a4b06e-12a9-4295-a379-97b3a5d9198c" />
 
 
 
@@ -159,7 +164,8 @@ interface range fa0/1-2
  channel-group 1 mode active
 ```
 
-> Insert your fix screenshot here.
+>  <img width="532" height="282" alt="verify fix" src="https://github.com/user-attachments/assets/39f10353-ec50-4156-bb21-72f87fcd4ff6" />
+
 
 ### Verification After Fix
 
@@ -197,7 +203,10 @@ interface port-channel1
  switchport mode trunk
 ```
 
-> Insert your configuration screenshots here.
+> <img width="590" height="122" alt="create issue #2" src="https://github.com/user-attachments/assets/65a300f0-ed55-4026-92ce-deb1fd0167e7" />
+> <img width="797" height="545" alt="Configure Switch 2" src="https://github.com/user-attachments/assets/82e2fc32-7547-47e0-842d-8e4d9f5223c2" />
+
+
 
 ### Verification
 
@@ -207,7 +216,17 @@ show interfaces trunk
 show running-config
 ```
 
-> Insert your verification screenshots here.
+> <img width="515" height="292" alt="verify issue #2" src="https://github.com/user-attachments/assets/ee26a797-d45e-457f-8536-edc4b4e52af1" />
+> <img width="422" height="72" alt="verify issue #2(trunk)" src="https://github.com/user-attachments/assets/b3ab519b-fd77-41b3-88b0-cfeb74746890" />
+> <img width="445" height="467" alt="verify issue #2(running-config)" src="https://github.com/user-attachments/assets/f346288f-d392-402f-93a2-5202890ed3d1" />
+> <img width="521" height="277" alt="verify issue #2(etherchannel)" src="https://github.com/user-attachments/assets/8847b738-1d7b-4383-915f-01ca6a7bb884" />
+> <img width="542" height="207" alt="verify issue #2(trunk sw2)" src="https://github.com/user-attachments/assets/8827715a-b623-4cba-ae0d-694fc29c7446" />
+> <img width="452" height="455" alt="verify issue #2(running-config2)" src="https://github.com/user-attachments/assets/6da00ea1-a2a7-49bf-86de-707a0a8a80f6" />
+
+
+
+
+
 
 | Verification | SW1 | SW2 |
 |--------------|-----|-----|
@@ -246,7 +265,8 @@ interface port-channel1
  switchport mode trunk
 ```
 
-> Insert your fix screenshot here.
+> <img width="492" height="87" alt="issue #2 fix" src="https://github.com/user-attachments/assets/bf5c52bd-ba64-410c-a70d-278452d9bec6" />
+
 
 ### Verification After Fix
 
