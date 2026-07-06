@@ -55,7 +55,8 @@ PAT is configured on the edge router so private IP addresses are translated befo
               PC0          PC1
 ```
 
-<img src="images/topology.jpg" alt="NAT PAT topology" />
+<img width="821" height="617" alt="topology" src="https://github.com/user-attachments/assets/31f423d2-b29d-497b-9184-6988e062f217" />
+
 
 ---
 
@@ -96,7 +97,7 @@ PAT is configured on the edge router so private IP addresses are translated befo
 | Subnet Mask | 255.255.255.0 |
 | Default Gateway | 192.168.1.1 |
 
-<img src="images/configure-pc0.jpg" alt="PC0 IP configuration" />
+<img width="865" height="325" alt="configure pc0" src="https://github.com/user-attachments/assets/f0181130-c4fc-4a3a-9788-24fe0fdc15bd" />
 
 ### PC1
 
@@ -106,7 +107,7 @@ PAT is configured on the edge router so private IP addresses are translated befo
 | Subnet Mask | 255.255.255.0 |
 | Default Gateway | 192.168.1.1 |
 
-<img src="images/configure-pc1.jpg" alt="PC1 IP configuration" />
+<img width="862" height="327" alt="configure pc1" src="https://github.com/user-attachments/assets/7d6086b6-13de-4563-a7ae-19ab57aa1ca5" />
 
 ---
 
@@ -126,7 +127,8 @@ interface g0/1
  no shutdown
 ```
 
-<img src="images/configure-r1.jpg" alt="R1 interface configuration" />
+<img width="780" height="347" alt="configure R1" src="https://github.com/user-attachments/assets/ea9b0757-0655-4e80-a278-bc394c82f059" />
+
 
 ---
 
@@ -142,7 +144,8 @@ interface g0/0
  no shutdown
 ```
 
-<img src="images/configure-isp.jpg" alt="ISP router configuration" />
+<img width="837" height="262" alt="configure ISP" src="https://github.com/user-attachments/assets/2bc7c8bb-4ee3-4f2d-a36d-e660ae080c3d" />
+
 
 ---
 
@@ -166,7 +169,7 @@ ping 203.0.113.2
 
 Result: Failed before NAT and routing were completed.
 
-<img src="images/test-connectivity-pc-before-nat.jpg" alt="PC connectivity test before NAT" />
+<img width="521" height="437" alt="Test basic connectivity R0" src="https://github.com/user-attachments/assets/3f59be47-7642-416f-96fc-e340f52ed256" />
 
 ### R1 to ISP
 
@@ -176,7 +179,8 @@ ping 203.0.113.2
 
 Result: Successful
 
-<img src="images/test-connectivity-r1-to-isp.jpg" alt="R1 ping to ISP router" />
+<img width="617" height="147" alt="Test basic connectivity R1" src="https://github.com/user-attachments/assets/8ce00f57-12b8-4599-a54a-7b23de5dff2a" />
+
 
 ---
 
@@ -188,7 +192,8 @@ The ACL identifies which inside addresses are allowed to be translated.
 access-list 1 permit 192.168.1.0 0.0.0.255
 ```
 
-<img src="images/acl-nat-list.jpg" alt="NAT ACL configuration" />
+<img width="616" height="127" alt="ACL" src="https://github.com/user-attachments/assets/f99cb55b-41ea-446a-b0ad-2696b7ab03ef" />
+
 
 ### Why This ACL Is Used
 
@@ -220,7 +225,8 @@ interface g0/1
 ip nat inside source list 1 interface g0/1 overload
 ```
 
-<img src="images/configure-nat-pat.jpg" alt="Configure PAT NAT overload" />
+<img width="706" height="292" alt="configure nat" src="https://github.com/user-attachments/assets/8f9e0a75-f448-4597-8814-f0668ccd27d1" />
+
 
 ### Command Breakdown
 
@@ -243,7 +249,8 @@ ip route 0.0.0.0 0.0.0.0 203.0.113.2
 
 This sends unknown traffic from R1 toward the ISP router.
 
-<img src="images/default-route-r1.jpg" alt="R1 default route" />
+<img width="420" height="37" alt="default route" src="https://github.com/user-attachments/assets/b1c5bc5b-1c94-4f99-a433-323e89d7d637" />
+
 
 ### Return Route on ISP
 
@@ -253,7 +260,8 @@ ip route 192.168.1.0 255.255.255.0 203.0.113.1
 
 This tells the ISP router how to return traffic to the inside LAN.
 
-<img src="images/return-route-isp.jpg" alt="ISP return route" />
+<img width="517" height="42" alt="return route" src="https://github.com/user-attachments/assets/f6c51968-aa9a-4491-8c4c-59068635bd8c" />
+
 
 ---
 
@@ -271,7 +279,7 @@ Result:
 Packets: Sent = 4, Received = 4, Lost = 0
 ```
 
-<img src="images/successful-ping-after-nat.jpg" alt="Successful ping after NAT" />
+<img width="592" height="275" alt="verification 1" src="https://github.com/user-attachments/assets/f14fa8bc-1587-4029-b9ab-c639d94f57a9" />
 
 ---
 
@@ -293,7 +301,8 @@ icmp  203.0.113.1:15    192.168.1.10:15   203.0.113.2:15    203.0.113.2:15
 icmp  203.0.113.1:16    192.168.1.10:16   203.0.113.2:16    203.0.113.2:16
 ```
 
-<img src="images/nat-translations.jpg" alt="NAT translation table" />
+<img width="687" height="167" alt="verification 2" src="https://github.com/user-attachments/assets/6ed9189c-6d49-42e4-b981-eceb1d1c7066" />
+
 
 ---
 
