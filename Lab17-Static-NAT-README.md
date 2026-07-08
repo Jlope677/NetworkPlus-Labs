@@ -186,7 +186,8 @@ interface g0/0/0
 | Subnet Mask | 255.255.255.0 |
 | Default Gateway | 203.0.113.2 |
 
-> <img width="865" height="325" alt="configure pc0" src="https://github.com/user-attachments/assets/4f4b8d20-66c6-4c15-a039-b258fa972c55" />
+> <img width="712" height="297" alt="outside pc configuration" src="https://github.com/user-attachments/assets/c3726e93-cf9a-48c6-a47e-e7f58b6e99ef" />
+
 
 
 ---
