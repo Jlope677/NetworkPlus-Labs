@@ -68,7 +68,8 @@ The original /30 network only supported two usable IP addresses (R1 and the ISP 
 
 To simulate an Internet client, an additional public device was required. Expanding the subnet to **/24** allowed the ISP Router, R1, the Outside PC, and the published Static NAT address to exist on the same public network.
 
-> Insert updated topology screenshot.
+> <img width="617" height="717" alt="new topology" src="https://github.com/user-attachments/assets/184872dd-69b0-4790-b36a-a48c9b8d16d8" />
+
 
 ---
 
@@ -97,9 +98,11 @@ Enable **HTTP** under:
 
 **Services → HTTP → On**
 
-> Insert Server IP configuration screenshot.
+> <img width="887" height="275" alt="configure server" src="https://github.com/user-attachments/assets/09537ce7-bce2-4740-a4b9-6f5a95bca0fe" />
 
-> Insert HTTP services screenshot.
+
+> <img width="1917" height="397" alt="enable http" src="https://github.com/user-attachments/assets/5ec87d05-bc74-4a46-896d-3947f67f71c2" />
+
 
 ---
 
@@ -119,9 +122,10 @@ http://192.168.1.100
 
 Verify the Packet Tracer web page loads.
 
-> Insert internal ping screenshot.
+>  <img width="431" height="227" alt="verify internal connectivity" src="https://github.com/user-attachments/assets/2292fadd-c908-42d1-accc-6dd5c33d714f" />
 
-> Insert internal browser screenshot.
+>  <img width="702" height="717" alt="verify internal connectivity2" src="https://github.com/user-attachments/assets/8855ab71-3acb-4d58-b890-cfcdc52c0536" />
+
 
 ---
 
@@ -132,7 +136,8 @@ no ip nat inside source list 1 interface g0/0/1 overload
 no access-list 1
 ```
 
-> Insert PAT removal screenshot.
+> <img width="527" height="137" alt="Remove PAT from Lab 16" src="https://github.com/user-attachments/assets/8b781fda-e683-4bd9-a626-ef699c83a685" />
+
 
 ---
 
@@ -142,7 +147,8 @@ no access-list 1
 ip nat inside source static 192.168.1.100 203.0.113.100
 ```
 
-> Insert Static NAT configuration screenshot.
+> <img width="542" height="77" alt="configure static nat" src="https://github.com/user-attachments/assets/12ac443d-0030-46e3-9120-1d2a455811a9" />
+
 
 ---
 
@@ -158,7 +164,8 @@ interface g0/0/1
  no shutdown
 ```
 
-> Insert R1 outside interface screenshot.
+> <img width="477" height="122" alt="r1 fix" src="https://github.com/user-attachments/assets/3d9547d9-2f8f-4b71-a0dc-852c8b5cd76e" />
+
 
 ## Reconfigure the ISP Router
 
@@ -168,7 +175,8 @@ interface g0/0/0
  no shutdown
 ```
 
-> Insert ISP interface screenshot.
+> <img width="486" height="166" alt="isp fix" src="https://github.com/user-attachments/assets/08c5cc2e-67a4-4ab3-81e7-2c68484920fd" />
+
 
 ## Configure the Outside PC
 
@@ -178,7 +186,8 @@ interface g0/0/0
 | Subnet Mask | 255.255.255.0 |
 | Default Gateway | 203.0.113.2 |
 
-> Insert Outside PC configuration screenshot.
+> <img width="865" height="325" alt="configure pc0" src="https://github.com/user-attachments/assets/4f4b8d20-66c6-4c15-a039-b258fa972c55" />
+
 
 ---
 
@@ -199,7 +208,8 @@ Confirm:
 - Static NAT mapping
 - Default route
 
-> Insert running-config screenshot.
+> <img width="697" height="477" alt="verify mapping" src="https://github.com/user-attachments/assets/83cf13a0-4610-4a93-86b9-03cfb08786e9" />
+
 
 ---
 
@@ -211,7 +221,8 @@ Configure the ISP router so packets destined for the translated public IP are fo
 ip route 203.0.113.100 255.255.255.255 203.0.113.1
 ```
 
-> Insert ISP route screenshot.
+> <img width="577" height="107" alt="configure isp router" src="https://github.com/user-attachments/assets/946c8b0a-93ec-4471-b1ae-c771267dda8e" />
+
 
 ## Why This Was Necessary
 
@@ -262,9 +273,11 @@ Verify:
 - All pings succeed.
 - The web page loads using the public IP.
 
-> Insert Outside PC ping screenshot.
+> <img width="577" height="107" alt="configure isp router" src="https://github.com/user-attachments/assets/68678073-efeb-422d-b58d-51ddc9f4e816" />
 
-> Insert Outside browser screenshot.
+
+> <img width="711" height="735" alt="verify static nat worked" src="https://github.com/user-attachments/assets/d11caec5-c782-4b94-8a13-83259d7e5a3b" />
+
 
 ---
 
@@ -281,7 +294,8 @@ Expected:
   - Inside Global: **203.0.113.100**
 - TCP translation after opening the webpage.
 
-> Insert NAT translation screenshot.
+> <img width="637" height="126" alt="nat translation" src="https://github.com/user-attachments/assets/254c1b1d-4c33-4cdd-9f0f-3325e0c57a7d" />
+
 
 | Field | Meaning |
 |------|---------|
