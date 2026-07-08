@@ -273,7 +273,8 @@ Verify:
 - All pings succeed.
 - The web page loads using the public IP.
 
-> <img width="577" height="107" alt="configure isp router" src="https://github.com/user-attachments/assets/68678073-efeb-422d-b58d-51ddc9f4e816" />
+> <img width="457" height="652" alt="verify fix " src="https://github.com/user-attachments/assets/52b3c706-4d67-45eb-b4be-8bf3048d0eb1" />
+
 
 
 > <img width="711" height="735" alt="verify static nat worked" src="https://github.com/user-attachments/assets/d11caec5-c782-4b94-8a13-83259d7e5a3b" />
