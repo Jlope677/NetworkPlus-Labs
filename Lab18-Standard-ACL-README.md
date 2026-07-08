@@ -46,7 +46,8 @@ Sales Network                                         Finance Network
 Sales-PC Fa0 -- Fa0/2 Sales-SW Fa0/1 -- G0/0/0 R1 G0/0/1 -- Fa0/1 Finance-SW Fa0/2 -- Fa0 Finance-PC
 ```
 
-<img src="images/topology.jpg" alt="Lab 18 Standard ACL topology" />
+<img width="870" height="237" alt="topology" src="https://github.com/user-attachments/assets/357e18de-a487-43f4-8223-74b5c1bdbd81" />
+
 
 ---
 
@@ -80,7 +81,8 @@ end
 write
 ```
 
-<img src="images/r1-configuration.jpg" alt="R1 interface configuration" />
+<img width="842" height="522" alt="r1 configuration" src="https://github.com/user-attachments/assets/ba8a3045-1715-45a5-a4c6-b9aa414189d2" />
+
 
 ---
 
@@ -94,7 +96,8 @@ write
 | Subnet Mask | 255.255.255.0 |
 | Default Gateway | 192.168.1.1 |
 
-<img src="images/sales-pc-configuration.jpg" alt="Sales PC configuration" />
+<img width="862" height="337" alt="sales configuration" src="https://github.com/user-attachments/assets/3f538674-f39c-464d-b1ce-2cb160b168b0" />
+
 
 ### Finance-PC
 
@@ -104,7 +107,8 @@ write
 | Subnet Mask | 255.255.255.0 |
 | Default Gateway | 192.168.2.1 |
 
-<img src="images/finance-pc-configuration.jpg" alt="Finance PC configuration" />
+<img width="880" height="332" alt="Finance configuration" src="https://github.com/user-attachments/assets/11a34983-6ada-4d34-a263-f17407201e33" />
+
 
 ---
 
@@ -124,7 +128,8 @@ Expected result:
 Reply from 192.168.2.10
 ```
 
-<img src="images/verify-connectivity-before-acl.jpg" alt="Successful ping before ACL" />
+<img width="852" height="446" alt="verify connectivity" src="https://github.com/user-attachments/assets/110795ee-de63-4d53-ada6-39d626f8cf2f" />
+
 
 This confirms routing and addressing are working before traffic filtering is introduced.
 
@@ -143,7 +148,8 @@ access-list 10 deny host 192.168.1.10
 access-list 10 permit any
 ```
 
-<img src="images/create-acl.jpg" alt="Create standard ACL" />
+<img width="562" height="107" alt="create access-list" src="https://github.com/user-attachments/assets/7a517989-6855-4919-81d0-74219a121818" />
+
 
 ### Why `permit any` Is Required
 
@@ -177,8 +183,8 @@ Apply ACL 10 outbound:
 interface g0/0/1
  ip access-group 10 out
 ```
+<img width="337" height="71" alt="apply access list" src="https://github.com/user-attachments/assets/b6da969b-9a28-4c9a-bb60-7874f8b35191" />
 
-<img src="images/apply-acl.jpg" alt="Apply ACL to interface" />
 
 ### Why This Interface and Direction Were Used
 
@@ -214,8 +220,8 @@ Standard IP access list 10
     10 deny host 192.168.1.10
     20 permit any
 ```
+<img width="332" height="87" alt="verify access list exist" src="https://github.com/user-attachments/assets/9ec49c36-029c-4181-ae14-7cbec9fbcb9f" />
 
-<img src="images/verify-acl-exists.jpg" alt="Verify ACL exists" />
 
 This confirms the ACL was created, but it does not prove that the ACL is applied to an interface.
 
@@ -233,7 +239,8 @@ Look for:
 Outgoing access list is 10
 ```
 
-<img src="images/verify-acl-interface.jpg" alt="Verify ACL applied to interface" />
+<img width="530" height="582" alt="verify where access list is applied" src="https://github.com/user-attachments/assets/52329914-d6cb-4668-87bd-eeaeae48ae6b" />
+
 
 This confirms ACL 10 is applied outbound on the Finance-facing interface.
 
@@ -255,7 +262,8 @@ access-list 10 deny host 192.168.1.10
 access-list 10 permit any
 ```
 
-<img src="images/show-running-config.jpg" alt="Show running configuration with ACL" />
+<img width="637" height="495" alt="show running-config" src="https://github.com/user-attachments/assets/404c78dc-6b8c-420b-9a79-6d3972b91757" />
+
 
 ---
 
@@ -272,8 +280,8 @@ Expected result:
 ```text
 Destination host unreachable
 ```
+<img width="542" height="260" alt="test acl" src="https://github.com/user-attachments/assets/ec799eb6-3e66-4dfb-be2c-1728a13e5008" />
 
-<img src="images/test-acl-blocked.jpg" alt="ACL blocking ping from Sales to Finance" />
 
 The ping fails because the ACL denies traffic from Sales-PC before it reaches the Finance network.
 
@@ -295,7 +303,8 @@ Standard IP access list 10
     20 permit any
 ```
 
-<img src="images/acl-hit-count.jpg" alt="ACL hit counter verification" />
+<img width="432" height="122" alt="hit count" src="https://github.com/user-attachments/assets/6f7f4b01-1ceb-4f1d-af27-175f2583f1b2" />
+
 
 ### What the Hit Count Means
 
