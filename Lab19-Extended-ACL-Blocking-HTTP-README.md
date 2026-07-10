@@ -42,6 +42,7 @@ Switch1 Fa0/1
 ├── Fa0/2 → Finance-PC (192.168.2.10)
 └── Fa0/3 → Payroll-Server (192.168.2.100)
 ```
+<img width="846" height="370" alt="topology" src="https://github.com/user-attachments/assets/8ba33458-e06f-40a0-89b6-fc85c6a03fca" />
 
 ------------------------------------------------------------------------
 
@@ -50,15 +51,20 @@ Switch1 Fa0/1
 Configure: - R1 interfaces - Sales-PC - Finance-PC - Payroll Server -
 Enable HTTP on the Payroll Server
 
-> Insert **configure R1(5).jpg**
+> <img width="1132" height="510" alt="configure R1" src="https://github.com/user-attachments/assets/9529f995-c32f-4a7d-9125-e55c34846fa5" />
 
-> Insert **configure Sales-PC.jpg**
 
-> Insert **configure Finance-PC.jpg**
+> <img width="857" height="322" alt="configure Sales-PC" src="https://github.com/user-attachments/assets/fc8b650a-3d44-4fb8-baaa-fd07ee37165d" />
 
-> Insert **configure PayRoll-Server.jpg**
 
-> Insert **turn HTTP on.jpg**
+> <img width="866" height="327" alt="configure Finance-PC" src="https://github.com/user-attachments/assets/c4799ffa-7041-4617-b201-c45ea0bb3006" />
+
+
+> <img width="887" height="307" alt="configure PayRoll-Server" src="https://github.com/user-attachments/assets/5ad58bc1-d115-48c1-b323-cb2ec9c5526e" />
+
+
+> <img width="871" height="477" alt="turn HTTP on" src="https://github.com/user-attachments/assets/de5402d1-52eb-430b-a59a-8aa2fc691603" />
+
 
 ------------------------------------------------------------------------
 
@@ -73,13 +79,16 @@ http://192.168.2.100
 
 Both should work before the ACL.
 
-> Insert **ping from sales-pc.jpg**
+> <img width="871" height="482" alt="ping from sales-pc" src="https://github.com/user-attachments/assets/2b0ec4b2-aa04-42ef-9a36-165334390e6f" />
 
-> Insert **browser on sales.jpg**
+
+> <img width="877" height="402" alt="browser on sales" src="https://github.com/user-attachments/assets/c7ab84e5-ae9d-48a1-b58e-3e7f51672dab" />
+
 
 Verify Finance-PC can browse to the Payroll Server.
 
-> Insert **browser on finance.jpg**
+> <img width="880" height="427" alt="browser on finance" src="https://github.com/user-attachments/assets/e143b4e7-7d4f-4daa-8a50-7364773dfbcf" />
+
 
 ------------------------------------------------------------------------
 
@@ -102,7 +111,8 @@ interface g0/0/0
 Extended ACLs are placed **close to the source**, so the ACL is applied
 inbound on the Sales interface.
 
-> Insert **apply the access list.jpg**
+> <img width="610" height="197" alt="apply the access list" src="https://github.com/user-attachments/assets/b367247a-8a25-493c-ae93-4dc00f79732c" />
+
 
 ------------------------------------------------------------------------
 
@@ -114,11 +124,13 @@ show ip interface g0/0/0
 show running-config
 ```
 
-> Insert **verify the access list.jpg**
+> <img width="561" height="97" alt="verify the access list" src="https://github.com/user-attachments/assets/f929382d-1d96-4d12-a624-69dd6e024b66" />
 
-> Insert **verify interface.jpg**
+> <img width="570" height="407" alt="verify interface" src="https://github.com/user-attachments/assets/a4a95998-f770-4913-8dc6-9a63b26a7ff0" />
 
-> Insert **running-config.jpg**
+
+> <img width="607" height="482" alt="running-config" src="https://github.com/user-attachments/assets/c3635103-96c4-48df-8869-41d802357ccd" />
+
 
 ------------------------------------------------------------------------
 
@@ -133,11 +145,14 @@ Finance-PC:
 
 -   `http://192.168.2.100` ✅ succeeds
 
-> Insert **test acl(1).jpg**
+> <img width="627" height="262" alt="test acl" src="https://github.com/user-attachments/assets/0d49ef92-5eac-4195-a0a9-cacdd386b218" />
 
-> Insert **test browser.jpg**
 
-> Insert **test browser on finance pc.jpg**
+> <img width="867" height="691" alt="test browser" src="https://github.com/user-attachments/assets/89a3010a-ac6b-4653-81da-f22c92642f44" />
+
+
+> <img width="881" height="502" alt="test browser on finance pc" src="https://github.com/user-attachments/assets/887c7096-8c75-4c3f-a9f7-a9b7ed7d78c5" />
+
 
 ------------------------------------------------------------------------
 
@@ -149,7 +164,7 @@ show access-lists
 
 The deny rule should show increasing matches.
 
-> Insert **hit counters.jpg**
+> <img width="657" height="107" alt="hit counters" src="https://github.com/user-attachments/assets/e3dd965a-fc65-4d5d-ba48-b2c608c26e72" />
 
 ------------------------------------------------------------------------
 
